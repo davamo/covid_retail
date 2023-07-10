@@ -1,22 +1,18 @@
 <div id="<%= dom_id order %>">
-  <p>
-    <strong>Product:</strong>
-    <%= order.product_id %>
-  </p>
+  <th scope="row">
+    <%= order.product.name %>
+  </th>
 
-  <p>
-    <strong>Customer:</strong>
-    <%= order.customer_id %>
-  </p>
+  <th scope="row">
+    <%= order.customer.name %>
+  </th>
 
-  <p>
-    <strong>Typesofpayment:</strong>
-    <%= order.typesofpayment_id %>
-  </p>
+  <th scope="row">
+    <%= order.typesofpayment.name %>
+  </th>
 
-  <p>
-    <strong>Total amount:</strong>
+  <th scope="row">
     <%= order.total_amount %>
-  </p>
+  </th>
 
 </div>

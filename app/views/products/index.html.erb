@@ -1,14 +1,35 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Products</h1>
-
-<div id="products">
-  <% @products.each do |product| %>
-    <%= render product %>
-    <p>
-      <%= link_to "Show this product", product %>
-    </p>
-  <% end %>
+<div class="btn-toolbar justify-content-end" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="input-group">
+    <%= link_to " + New product", new_product_path , class: 'btn btn-primary' %>
+  </div>
 </div>
 
-<%= link_to "New product", new_product_path %>
+<h1>Products</h1>
+<hr>
+
+<div id="products">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Description</th>
+        <th scope="col">Amount</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <% @products.each do |product| %>
+      <tr>
+        <%= render product %>
+        <th scope="row"> <%= link_to "Show this product", product, class: 'btn btn-warning'  %></th>
+      </tr>
+      <% end %>
+
+    </tbody>
+  </table>
+
+</div>

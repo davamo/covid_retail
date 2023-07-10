@@ -8,15 +8,15 @@
 
 
       <% if user_signed_in? %>
-      Products
+          <%= link_to "Products", products_path, class: 'btn btn-primary' %>
       <% end %>
 
       <% if user_signed_in? %>
-      Customers
+          <%= link_to "Customers", customers_path, class: 'btn btn-primary' %>
       <% end %>
 
       <% if user_signed_in? %>
-      Orders
+        <%= link_to "Orders", orders_path, class: 'btn btn-primary' %>
       <% end %>
 
 

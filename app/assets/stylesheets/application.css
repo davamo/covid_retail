@@ -88,3 +88,7 @@ caption {
 .navbar {
     background: #080d40;
 }
+
+th {
+    color:aqua;
+}

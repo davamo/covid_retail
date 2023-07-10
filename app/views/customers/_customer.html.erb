@@ -1,17 +1,14 @@
 <div id="<%= dom_id customer %>">
-  <p>
-    <strong>Name:</strong>
+  <th scope="row">
     <%= customer.name %>
-  </p>
+  </th>
 
-  <p>
-    <strong>Email:</strong>
+ <th scope="row">
     <%= customer.email %>
-  </p>
+  </th>
 
-  <p>
-    <strong>Typesofclient:</strong>
-    <%= customer.typesofclient_id %>
-  </p>
+  <th scope="row">
+    <%= customer.typesofclient.name %>
+  </th>
 
 </div>

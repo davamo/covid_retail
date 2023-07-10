@@ -1,14 +1,36 @@
 <p style="color: green"><%= notice %></p>
-
-<h1>Customers</h1>
-
-<div id="customers">
-  <% @customers.each do |customer| %>
-    <%= render customer %>
-    <p>
-      <%= link_to "Show this customer", customer %>
-    </p>
-  <% end %>
+<div class="btn-toolbar justify-content-end" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="input-group">
+    <%= link_to " + New customer", new_customer_path , class: 'btn btn-primary' %>
+  </div>
 </div>
 
-<%= link_to "New customer", new_customer_path %>
+<h1>Customers</h1>
+<hr>
+
+<div id="customers">
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Typesofclient</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+
+  <% @customers.each do |customer| %>
+    <tr>
+      <%= render customer %>
+      <th><%= link_to "Show this customer", customer, class: 'btn btn-warning'  %></th>
+    </tr>
+  <% end %>
+
+    </tbody>
+  </table>
+
+
+
+</div>
+

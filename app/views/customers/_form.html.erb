@@ -23,7 +23,8 @@
 
   <div>
     <%= form.label :typesofclient_id, style: "display: block" %>
-    <%= form.number_field :typesofclient_id %>
+    <%= form.select :typesofclient_id, options_for_select(Typesofclient.all.map { |c| [c.name, c.id] }, @customer.typesofclient_id) %>
+
   </div>
 
   <div>

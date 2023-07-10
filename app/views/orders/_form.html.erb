@@ -13,17 +13,17 @@
 
   <div>
     <%= form.label :product_id, style: "display: block" %>
-    <%= form.number_field :product_id %>
+    <%= form.select :product_id, options_for_select(Product.all.map { |c| [c.name, c.id] }, @order.product_id) %>
   </div>
 
   <div>
     <%= form.label :customer_id, style: "display: block" %>
-    <%= form.number_field :customer_id %>
+    <%= form.select :customer_id, options_for_select(Customer.all.map { |c| [c.name, c.id] }, @order.customer_id) %>
   </div>
 
   <div>
     <%= form.label :typesofpayment_id, style: "display: block" %>
-    <%= form.number_field :typesofpayment_id %>
+    <%= form.select :typesofpayment_id, options_for_select(Typesofpayment.all.map { |c| [c.name, c.id] }, @order.typesofpayment_id) %>
   </div>
 
   <div>
