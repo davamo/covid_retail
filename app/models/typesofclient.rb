@@ -1,0 +1,2 @@
+class Typesofclient < ApplicationRecord
+end
